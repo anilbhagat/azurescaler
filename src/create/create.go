@@ -38,6 +38,10 @@ var (
 	virtualMachineScaleSetsClient *armcompute.VirtualMachineScaleSetsClient
 )
 
+// CreateAzure is a function that creates Azure resources.
+// It takes a stage string as a parameter.
+// The function creates a client, creates a resource group, virtual network, subnet, and virtual machine scale sets.
+// If the KEEP_RESOURCE environment variable is not set, it also performs cleanup of the created resources.
 func CreateAzure(stage string) {
 	// create a client
 
@@ -99,36 +103,6 @@ func CreateAzure(stage string) {
 		}
 		log.Println("cleaned up successfully.")
 	}
-
-	// Create a new VM
-	/*
-		vmSize := armcompute.VirtualMachineSizeTypesStandardB1S
-		priority := armcompute.VirtualMachinePriorityTypesSpot
-		evictionPolicy := armcompute.VirtualMachineEvictionPolicyTypesDeallocate
-		vm := armcompute.VirtualMachine{
-			Location:         to.StringPtr(location),
-			ExtendedLocation: &armcompute.ExtendedLocation{},
-			Identity:         &armcompute.VirtualMachineIdentity{},
-			Plan:             &armcompute.Plan{},
-			Properties:       &armcompute.VirtualMachineProperties{HardwareProfile: &armcompute.HardwareProfile{VMSize: &vmSize}, NetworkProfile: &armcompute.NetworkProfile{}, StorageProfile: &armcompute.StorageProfile{}, Priority: &priority, EvictionPolicy: &evictionPolicy, BillingProfile: &armcompute.BillingProfile{MaxPrice: to.Float64Ptr(-1)}},
-			Tags:             map[string]*string{},
-			Zones:            []*string{},
-			ID:               new(string),
-			Name:             new(string),
-			Resources:        []*armcompute.VirtualMachineExtension{},
-			Type:             new(string),
-		}
-
-		// Create the VM
-		resp, err := client.BeginCreateOrUpdate(context.Background(), resourceGroup, vmName, vm, nil)
-		if err != nil {
-			log.Fatalf("Failed to start creating VM: %v", err)
-		}
-		// Wait for the VM creation to complete
-		_, err = resp.Result(context.Background())
-		if err != nil {
-			log.Fatalf("Failed to finish creating VM: %v", err)
-		} */
 }
 
 func createVirtualNetwork(ctx context.Context) (*armnetwork.VirtualNetwork, error) {
