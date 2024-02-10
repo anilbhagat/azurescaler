@@ -1,0 +1,6 @@
+* text eol=lf
+/internal/website/data/examples.json  linguist-generated=true
+**/testdata/**/*.yaml    linguist-generated=true
+**/testdata/**/*.replay  linguist-generated=true
+*.replay binary
+

@@ -1,0 +1,102 @@
+{
+  "Initial": "AQAAAA7afM01G4G2tv5c",
+  "Version": "0.2",
+  "Converter": {
+    "ScrubBody": null,
+    "ClearHeaders": [
+      "^X-Goog-.*Encryption-Key$",
+      "^Expires$",
+      "^Signature$"
+    ],
+    "RemoveRequestHeaders": [
+      "^Authorization$",
+      "^Proxy-Authorization$",
+      "^Connection$",
+      "^Content-Type$",
+      "^Date$",
+      "^Host$",
+      "^Transfer-Encoding$",
+      "^Via$",
+      "^X-Forwarded-.*$",
+      "^X-Cloud-Trace-Context$",
+      "^X-Goog-Api-Client$",
+      "^X-Google-.*$",
+      "^X-Gfe-.*$"
+    ],
+    "RemoveResponseHeaders": [
+      "^X-Google-.*$",
+      "^X-Gfe-.*$"
+    ],
+    "ClearParams": [
+      "^Expires$",
+      "^Signature$"
+    ],
+    "RemoveParams": null
+  },
+  "Entries": [
+    {
+      "ID": "cff025973b191f6d",
+      "Request": {
+        "Method": "GET",
+        "URL": "https://storage.googleapis.com/go-cloud-blob-test-bucket/nonexistent-key",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "User-Agent": [
+            "go-cloud/blob/0.1.0"
+          ]
+        },
+        "MediaType": "",
+        "BodyParts": [
+          ""
+        ]
+      },
+      "Response": {
+        "StatusCode": 404,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Alt-Svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+          ],
+          "Cache-Control": [
+            "private, max-age=0"
+          ],
+          "Content-Length": [
+            "203"
+          ],
+          "Content-Type": [
+            "application/xml; charset=UTF-8"
+          ],
+          "Date": [
+            "Wed, 03 Aug 2022 20:10:29 GMT"
+          ],
+          "Expires": [
+            "CLEARED"
+          ],
+          "Server": [
+            "UploadServer"
+          ],
+          "X-Guploader-Customer": [
+            "cloud-storage"
+          ],
+          "X-Guploader-Request-Class": [
+            "LATENCY_SENSITIVE"
+          ],
+          "X-Guploader-Request-Result": [
+            "agent_rejected"
+          ],
+          "X-Guploader-Upload-Result": [
+            "agent_rejected"
+          ],
+          "X-Guploader-Uploadid": [
+            "ADPycdveBbMFzIWuTQOWr-I4q_knUZXGp-_PyZRuhtqcVmy66nR_NsBrjHJxE78iJPpzBmHk8zJjyH93QSOM5WFjd89QpHFra3hs"
+          ]
+        },
+        "Body": "PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48RXJyb3I+PENvZGU+Tm9TdWNoS2V5PC9Db2RlPjxNZXNzYWdlPlRoZSBzcGVjaWZpZWQga2V5IGRvZXMgbm90IGV4aXN0LjwvTWVzc2FnZT48RGV0YWlscz5ObyBzdWNoIG9iamVjdDogZ28tY2xvdWQtYmxvYi10ZXN0LWJ1Y2tldC9ub25leGlzdGVudC1rZXk8L0RldGFpbHM+PC9FcnJvcj4="
+      }
+    }
+  ]
+}

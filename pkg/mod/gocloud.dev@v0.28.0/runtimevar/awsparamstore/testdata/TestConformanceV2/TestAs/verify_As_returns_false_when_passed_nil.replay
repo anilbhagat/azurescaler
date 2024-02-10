@@ -1,0 +1,289 @@
+{
+  "Initial": "AQAAAA7afPvqOegM2P5c",
+  "Version": "0.2",
+  "Converter": {
+    "ScrubBody": null,
+    "ClearHeaders": [
+      "^X-Goog-.*Encryption-Key$",
+      "^Amz-Sdk-Invocation-Id$",
+      "^X-Amz-Date$",
+      "^User-Agent$"
+    ],
+    "RemoveRequestHeaders": [
+      "^Authorization$",
+      "^Proxy-Authorization$",
+      "^Connection$",
+      "^Content-Type$",
+      "^Date$",
+      "^Host$",
+      "^Transfer-Encoding$",
+      "^Via$",
+      "^X-Forwarded-.*$",
+      "^X-Cloud-Trace-Context$",
+      "^X-Goog-Api-Client$",
+      "^X-Google-.*$",
+      "^X-Gfe-.*$",
+      "^Authorization$",
+      "^Duration$",
+      "^X-Amz-Security-Token$"
+    ],
+    "RemoveResponseHeaders": [
+      "^X-Google-.*$",
+      "^X-Gfe-.*$"
+    ],
+    "ClearParams": [
+      "^X-Amz-Date$"
+    ],
+    "RemoveParams": [
+      "^X-Amz-Credential$",
+      "^X-Amz-Signature$",
+      "^X-Amz-Security-Token$"
+    ]
+  },
+  "Entries": [
+    {
+      "ID": "41ee0ac5b5da90f2",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://ssm.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Amz-Sdk-Invocation-Id": [
+            "CLEARED"
+          ],
+          "Amz-Sdk-Request": [
+            "attempt=1; max=1"
+          ],
+          "Content-Length": [
+            "48"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "AmazonSSM.GetParameter"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJOYW1lIjoidmFyaWFibGUtZm9yLWFzIiwiV2l0aERlY3J5cHRpb24iOnRydWV9"
+        ]
+      },
+      "Response": {
+        "StatusCode": 400,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "50"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 03 Aug 2022 23:29:47 GMT"
+          ],
+          "Server": [
+            "Server"
+          ],
+          "X-Amzn-Requestid": [
+            "5fa87a19-f77b-4c4d-85c5-97888a0928de"
+          ]
+        },
+        "Body": "H4sIAAAAAAAAAKtWio8vqSxIVbJSCkgsSsxNLUkt8ssvccsvzUtRqgUAF48DRR4AAAA="
+      }
+    },
+    {
+      "ID": "a4b2e96c159ef317",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://ssm.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Amz-Sdk-Invocation-Id": [
+            "CLEARED"
+          ],
+          "Amz-Sdk-Request": [
+            "attempt=1; max=1"
+          ],
+          "Content-Length": [
+            "81"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "AmazonSSM.PutParameter"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJOYW1lIjoidmFyaWFibGUtZm9yLWFzIiwiT3ZlcndyaXRlIjp0cnVlLCJUeXBlIjoiU3RyaW5nIiwiVmFsdWUiOiJoZWxsbyB3b3JsZCJ9"
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "51"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 03 Aug 2022 23:29:47 GMT"
+          ],
+          "Server": [
+            "Server"
+          ],
+          "X-Amzn-Requestid": [
+            "fb9a7f7e-20e4-4bfc-8201-d3eef50397b4"
+          ]
+        },
+        "Body": "H4sIAAAAAAAAAKtWCslMLVKyUgouScxLSSxKUdJRCkstKs7Mz1OyMqwFAFB+6N8fAAAA"
+      }
+    },
+    {
+      "ID": "2284aa641ba9b397",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://ssm.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Amz-Sdk-Invocation-Id": [
+            "CLEARED"
+          ],
+          "Amz-Sdk-Request": [
+            "attempt=1; max=1"
+          ],
+          "Content-Length": [
+            "48"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "AmazonSSM.GetParameter"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJOYW1lIjoidmFyaWFibGUtZm9yLWFzIiwiV2l0aERlY3J5cHRpb24iOnRydWV9"
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "179"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 03 Aug 2022 23:29:47 GMT"
+          ],
+          "Server": [
+            "Server"
+          ],
+          "X-Amzn-Requestid": [
+            "851e5ce7-dda5-4b7e-aea8-0ee490241cdb"
+          ]
+        },
+        "Body": "H4sIAAAAAAAAAGXMywrCMBQE0F+RrBsfiX1lJ+hOi6i4v9JbDaRNSVKrlP67t6ArlzPDnIEdwUGNAR1TA9ucCqYYuEZB75X3teo8R/CBC7VOhMyWQsSpEKr9vRZPcBpuBnllHQfPIraFAJd3iyQFfAVq9iQcbKkrjSWttKzmSZzHSS6zVMpsl0esII8e/9yXOgenmzvlK5huKh5ojJ311plyatF5bRuSx/EDNzNcmtUAAAA="
+      }
+    },
+    {
+      "ID": "b7c48cbab3fa7ecc",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://ssm.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Amz-Sdk-Invocation-Id": [
+            "CLEARED"
+          ],
+          "Amz-Sdk-Request": [
+            "attempt=1; max=1"
+          ],
+          "Content-Length": [
+            "26"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "AmazonSSM.DeleteParameter"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJOYW1lIjoidmFyaWFibGUtZm9yLWFzIn0="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "22"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 03 Aug 2022 23:29:47 GMT"
+          ],
+          "Server": [
+            "Server"
+          ],
+          "X-Amzn-Requestid": [
+            "fd5b5d3a-a334-4da5-a36e-059cd4612f7e"
+          ]
+        },
+        "Body": "H4sIAAAAAAAAAKuuBQBDv6ajAgAAAA=="
+      }
+    }
+  ]
+}

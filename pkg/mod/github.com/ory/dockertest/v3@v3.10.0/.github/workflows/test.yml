@@ -1,0 +1,22 @@
+name: Test CI
+on:
+  push:
+    branches:
+      - master
+      - v3
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v4
+        with:
+          go-version: "1.17"
+      - run: make test
+      - name: WriteGoList
+        run: go list -json -deps ./... > go.list
+      - name: Nancy
+        uses: sonatype-nexus-community/nancy-github-action@main
+      - name: Coveralls
+        run: bash <(curl -s https://codecov.io/bash)
