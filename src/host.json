@@ -6,7 +6,7 @@
   },
     "customHandler": {
       "description": {
-        "defaultExecutablePath": "bin/HttpTriggerAzureScaler",
+        "defaultExecutablePath": "azurescaler",
         "workingDirectory": "",
         "arguments": []
       },

@@ -3,6 +3,8 @@ package main
 import (
 	"azurescaler/v3/create"
 	"azurescaler/v3/delete"
+	"azurescaler/v3/send"
+	"azurescaler/v3/receive"
 
 	"encoding/json"
 	"fmt"
@@ -52,6 +54,26 @@ func main() {
 			resByte = postHandler(w, r)
 
 		}
+		w.Header().Set("Content-Type", "application/json")
+		w.Write(resByte)
+		fmt.Fprint(w, "Hello from Go! --msgic show completed")
+
+	})
+
+	http.HandleFunc("/api/send", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "Hello from Go! -- We will start the magic sooon")
+		var resByte []byte
+		send.SendMessage("start") // Ensure this function exists in the "send" package
+		w.Header().Set("Content-Type", "application/json")
+		w.Write(resByte)
+		fmt.Fprint(w, "Hello from Go! --msgic show completed")
+
+	})
+
+	http.HandleFunc("/api/receive", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "Hello from Go! -- We will start the magic sooon")
+		var resByte []byte
+		receive.ReceiveMessage("start") // Ensure this function exists in the "send" package
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(resByte)
 		fmt.Fprint(w, "Hello from Go! --msgic show completed")
